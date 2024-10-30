@@ -6,6 +6,11 @@ import Login from "../pages/AuthenticationPages/Login";
 import ServicesPage from "../pages/ServicePage/ServicesPage";
 import Booking from "../pages/Home/Booking/Booking";
 import PrivetRoute from "../PrivetRoute/PrivetRoute";
+import AboutDetails from "../pages/AboutDetails/AboutDetails";
+// import AboutDetails from "../pages/AboutDetails/AboutDetails";
+// import AboutDetails from "../pages/AboutDetails/AboutDetails";
+// import AboutDetails from "../pages/AboutDetails/AboutDetails";
+// import AboutDetails from "../pages/AboutDetails/AboutDetails";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +34,10 @@ const router = createBrowserRouter([
         element: <ServicesPage></ServicesPage>,
       },
       {
+        path: "about",
+        element: <AboutDetails></AboutDetails>,
+      },
+      {
         path: "services",
         element: <ServicesPage></ServicesPage>,
       },
@@ -41,6 +50,16 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/product/${params.id}`),
+      },
+      {
+        path: "/services/:id",
+        element: (
+          <PrivetRoute>
+            <Booking></Booking>
+          </PrivetRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/services/${params.id}`),
       },
     ],
   },

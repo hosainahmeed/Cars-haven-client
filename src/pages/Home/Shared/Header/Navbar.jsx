@@ -59,6 +59,15 @@ function Navbar() {
                 <li>
                   <Link to="contact">Contact</Link>
                 </li>
+                {user?.email ? (
+                  <li>
+                    <button onClick={logoutHandle}>Logout</button>
+                  </li>
+                ) : (
+                  <li>
+                    <NavLink to="/signin">login</NavLink>
+                  </li>
+                )}
               </ul>
             </div>
           </div>

@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "authorName": "John Doe",
+      "blogTitle": "Understanding JavaScript Closures",
+      "images": {
+        "blogCoverImage": "https://plus.unsplash.com/premium_photo-1669904022334-e40da006a0a3?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "authorImage": "https://images.unsplash.com/photo-1678286742832-26543bb49959?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      "readTime": 5,
+      "publishDate": "2024-08-01"
+    },
+    {
+      "id": 2,
+      "authorName": "Jane Smith",
+      "blogTitle": "Exploring the World of React Hooks",
+      "images": {
+        "blogCoverImage": "https://images.unsplash.com/photo-1651066471224-b970dd45acc3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "authorImage": "https://images.unsplash.com/photo-1704726135027-9c6f034cfa41?q=80&w=1970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      "readTime": 8,
+      "publishDate": "2024-08-10"
+    },
+    {
+      "id": 3,
+      "authorName": "Michael Johnson",
+      "blogTitle": "Mastering CSS Flexbox for Responsive Design",
+      "images": {
+        "blogCoverImage": "https://images.unsplash.com/photo-1719937206602-b48d3c70e02f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "authorImage": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      "readTime":6,
+      "publishDate": "2024-07-20"
+    },
+    {
+      "id": 4,
+      "authorName": "Emily Davis",
+      "blogTitle": "A Guide to Web Performance Optimization",
+      "images": {
+        "blogCoverImage": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "authorImage": "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      "readTime": 7,
+      "publishDate": "2024-09-05"
+    }
+  ]
+  
