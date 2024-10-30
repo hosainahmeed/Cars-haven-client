@@ -2,19 +2,18 @@ import { useEffect, useState } from "react";
 import SectionTitle from "../../../component/sectionheader/SectionTitle";
 import ReactStars from "react-rating-stars-component";
 import { Link } from "react-router-dom";
+import useAxios from "../../../hook/useAxios";
 function Products() {
   const [parts, setParts] = useState([]);
+  const axiosCommon = useAxios();
   useEffect(() => {
-    fetch("http://localhost:5000/product")
-      .then((res) => res.json())
-      .then((data) => setParts(data));
-  }, []);
+    axiosCommon.get("/product").then((res) => {
+      setParts(res.data);
+    });
+  }, [axiosCommon]);
 
   return (
-    <div
-      id="products"
-      className=" py-28 flex items-center justify-between flex-col gap-12"
-    >
+    <div id="products" className="flex items-center flex-col gap-12">
       <SectionTitle
         subTitle="Popular Products"
         title="Browse Our Products"
@@ -22,15 +21,12 @@ function Products() {
       ></SectionTitle>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
         {parts.map((part) => (
-          <div
-            key={part._id}
-            className="card bg-base-100 border-2 min-w-72  md:w-92 shadow-xl"
-          >
-            <figure className="p-2 ">
+          <div key={part._id} className="card bg-base-100 border-2 shadow-xl">
+            <figure className="p-2">
               <img
                 src={part.image}
                 alt={part.title}
-                className="rounded-xl w-full object-cover  h-56"
+                className="rounded-xl w-full object-cover h-56"
               />
             </figure>
             <div className="card-body">
@@ -40,8 +36,8 @@ function Products() {
                 <p className="text-red-400">price: ${part.price}</p>
               </div>
             </div>
-            <Link className="text-center w-full" to={`/product/${part._id}`}>
-              <button className="btn w-full  btn-xl bg-[#ff3811] text-white uppercase">
+            <Link className="text-start ml-4 w-full" to={`/product/${part._id}`}>
+              <button className="btn mb-4  btn-xl bg-[#ff3811] text-white uppercase">
                 Add to cart
               </button>
             </Link>

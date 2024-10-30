@@ -1,22 +1,26 @@
 import { useEffect } from "react";
 import { useLoaderData } from "react-router-dom";
-import { useForm } from "react-hook-form"; // Importing React Hook Form
+import { useForm } from "react-hook-form";
 import useAuth from "../../../hook/useAuth";
 import PagesBanner from "../../../component/PagesBanner/PagesBanner";
-import axios from "axios";
+import toast from "react-hot-toast";
+import useAxios from "../../../hook/useAxios";
 
 function Booking() {
   const product = useLoaderData();
+  
   const { user } = useAuth();
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const axiosCommon = useAxios();
 
   const onSubmit = (data) => {
     const { name, price, image } = product;
@@ -30,12 +34,17 @@ function Booking() {
       productImage: image,
       massage,
     };
-    axios
-      .post("http://localhost:5000/booking", bookItemDetails, {
+    axiosCommon
+      .post("/booking", bookItemDetails, {
         withCredentials: true,
       })
       .then((res) => {
         console.log(res.data);
+        if (!res.data.success) {
+          return toast.error("Something wrong");
+        }
+        toast.success("Your order successed!");
+        reset();
       });
   };
 
@@ -106,7 +115,7 @@ function Booking() {
         </div>
 
         {/* Phone */}
-        <div className="form-control w-full">
+        <div className="form-control  md:col-span-2 w-full">
           <label className="label">
             <span className="label-text">Phone</span>
           </label>

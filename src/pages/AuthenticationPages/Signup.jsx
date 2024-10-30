@@ -21,7 +21,7 @@ const Signup = () => {
   };
 
   return (
-    <div className=" md: flex flex-col md:flex-row  items-center justify-center gap-12 mx-4">
+    <div className=" py-12 md:py-28 md: flex flex-col md:flex-row  items-center justify-center gap-12 mx-4">
       <img src={signupimage} className="w-72 md:w-96" />
       <div className="bg-[#13232f]/90 p-10  rounded-lg shadow-lg">
         <div>

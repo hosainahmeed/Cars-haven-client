@@ -42,7 +42,7 @@ function Login() {
     reset();
   };
   return (
-    <div className=" md: flex flex-col-reverse md:flex-row  items-center justify-center gap-12 mx-4">
+    <div className="py-12 md:py-28 md: flex flex-col-reverse md:flex-row  items-center justify-center gap-12 mx-4">
       <img className="w-72 md:w-96" src={loginImage} />
       <div className="bg-[#13232f]/90 p-10 rounded-lg shadow-lg">
         <h1 className="text-center text-white font-light text-3xl mb-10">
